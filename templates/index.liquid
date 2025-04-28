@@ -1,35 +1,3 @@
-{% schema %}
-{
-  "name": "Home page",
-  "blocks": [
-    {
-      "type": "hero",
-      "name": "Banner principal",
-      "settings": {}
-    },
-    {
-      "type": "featured-products",
-      "name": "Produtos em Destaque",
-      "settings": {}
-    },
-    {
-      "type": "rich-text",
-      "name": "Texto institucional",
-      "settings": {}
-    }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "hero"
-      },
-      {
-        "type": "featured-products"
-      },
-      {
-        "type": "rich-text"
-      }
-    ]
-  }
-}
-{% endschema %}
+{% section 'hero-banner' %}
+{% section 'featured-products' %}
+{% section 'rich-text' %}
