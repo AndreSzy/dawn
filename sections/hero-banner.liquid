@@ -1,47 +1,46 @@
-<section class="hero-banner" style="text-align:center; padding: 60px 20px; background: linear-gradient(135deg, #f5f5f5, #ffffff);">
-    <h1 style="font-size: 3rem; margin-bottom: 20px;">{{ section.settings.title }}</h1>
-    <p style="font-size: 1.5rem; margin-bottom: 30px;">{{ section.settings.subtitle }}</p>
-    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-      <a href="{{ section.settings.button_link }}" style="padding: 12px 30px; background-color: #000; color: #fff; text-decoration: none; border-radius: 6px;">
-        {{ section.settings.button_text }}
-      </a>
-    {% endif %}
-  </section>
-  
-  {% schema %}
-  {
-    "name": "Banner Principal",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Título do Banner",
-        "default": "Seja bem-vindo à nossa loja!"
-      },
-      {
-        "type": "text",
-        "id": "subtitle",
-        "label": "Subtítulo do Banner",
-        "default": "Produtos de alta qualidade para o seu bem-estar."
-      },
-      {
-        "type": "text",
-        "id": "button_text",
-        "label": "Texto do Botão",
-        "default": "Ver Produtos"
-      },
-      {
-        "type": "url",
-        "id": "button_link",
-        "label": "Link do Botão",
-        "default": "/collections/all"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Banner Principal"
-      }
-    ]
-  }
-  {% endschema %}
-  
+<section style="text-align: center; padding: 60px 20px;">
+  <h1>{{ section.settings.title }}</h1>
+  <p>{{ section.settings.subtitle }}</p>
+  {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+    <a href="{{ section.settings.button_link }}" style="background-color: black; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 20px;">
+      {{ section.settings.button_text }}
+    </a>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Banner Principal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Bem-vindo à nossa loja!"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Produtos de qualidade para você."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto do Botão",
+      "default": "Conheça"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link do Botão",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Principal"
+    }
+  ]
+}
+{% endschema %}
